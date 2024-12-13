@@ -1,8 +1,4 @@
 
-/**
- *
- * @author GENERATION 10
- */
 public class Reporte {
     public String detalle;
     public String estado;

@@ -1,0 +1,4 @@
+
+public ControlCalidad extends BaseManejador{
+    
+}

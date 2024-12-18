@@ -6,7 +6,7 @@ public class SportsPredictor {
 
         Evento evento1 = new Evento() ;
         evento1.cerrarApuestas();
-        
+
         
 
         FabricadeEventos fabrica = new FabricadeEventos() {
@@ -18,6 +18,14 @@ public class SportsPredictor {
 
         fabrica.crearEvento("Evento1", new java.sql.Date(new Date().getTime()));
         fabrica.crearEvento("Evento2", new java.sql.Date(new Date().getTime()));
+
+        Deportes deporte1 = new FabricadeEventos() {
+            @Override
+            public void crearEvento(String nombre, java.sql.Date fecha) {
+                System.out.println("Evento creado: " + nombre + " " + fecha);
+            }
+        };
+        
         
     }
     

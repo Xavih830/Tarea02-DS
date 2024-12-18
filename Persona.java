@@ -2,8 +2,8 @@
 
 
 public class Persona {
-    String nombre;
-    String email;
+    private String nombre;
+    private String email;
 
     public Persona (String nombre, String email){
         this.nombre = nombre;

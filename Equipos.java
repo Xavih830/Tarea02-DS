@@ -1,8 +1,8 @@
-
+import java.util.List;
 
 public class Equipos {
-    String nombre;
-    List<Jugador>  jugadores;
+    private String nombre;
+    private List<Jugador>  jugadores;
 
     public Equipos(String nombre, List<Jugador> jugadores) {
         this.nombre = nombre;

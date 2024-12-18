@@ -1,5 +1,5 @@
 
-
+import java.util.List;
 
 public class Administrador extends Persona {
     
@@ -7,6 +7,13 @@ public class Administrador extends Persona {
         super(nombre, email);
     }
 
+    public void configurarOpciones(Evento evento, List<CategoriaPronostico> opciones){
+
+    }
+
+    public void GestionarReglasPuntuacion(){
+        
+    }
     
     
 }

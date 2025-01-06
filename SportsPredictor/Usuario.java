@@ -11,7 +11,7 @@ public class Usuario extends Persona{
         this.puntos = puntos;
         this.pronosticos = pronosticos;
     }
-
+    
     public void recibirNotificacion(String mensaje){
 
     }

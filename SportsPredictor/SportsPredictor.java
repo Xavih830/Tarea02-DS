@@ -1,31 +1,21 @@
+import java.time.LocalDateTime;
+import java.time.Month;
 import java.util.Date;
+
+import FactoryMethod.Deportes;
+import FactoryMethod.FabricadeEventos;
+import FactoryMethod.crearEventoBaloncesto;
 
 
 public class SportsPredictor {
     public static void main(String[] args) {
 
-        Evento evento1 = new Evento() ;
-        evento1.cerrarApuestas();
+               
 
-        
-
-        FabricadeEventos fabrica = new FabricadeEventos() {
-            @Override
-            public void crearEvento(String nombre, java.sql.Date fecha) {
-                System.out.println("Evento creado: " + nombre + " " + fecha);
-            }
-        };        
-
-        fabrica.crearEvento("Evento1", new java.sql.Date(new Date().getTime()));
-        fabrica.crearEvento("Evento2", new java.sql.Date(new Date().getTime()));
-
-        Deportes deporte1 = new FabricadeEventos() {
-            @Override
-            public void crearEvento(String nombre, java.sql.Date fecha) {
-                System.out.println("Evento creado: " + nombre + " " + fecha);
-            }
-        };
-        
+        FabricadeEventos evento1 = new crearEventoBaloncesto();
+        Deportes baloncesto = evento1.crearEvento(); 
+        baloncesto.crearEvento("Baloncesto del siglo", LocalDateTime.of( 2025,Month.FEBRUARY,10,19,30));
+        Deportes futbol = fabrica.crearEvento("Futbol", fecha);
         
     }
     

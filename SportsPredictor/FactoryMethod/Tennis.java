@@ -5,6 +5,7 @@ public class Tennis implements Deportes{
 
     @Override
     public void crearEvento(String nombre, LocalDateTime fecha) {
+        
         System.out.println("Evento de tenis creado");
     }
    

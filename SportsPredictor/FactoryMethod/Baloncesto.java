@@ -8,8 +8,5 @@ public class Baloncesto implements Deportes{
         System.out.println("Evento de baloncesto creado");
     }
 
-   
-
-
     
 }

@@ -1,3 +1,5 @@
+package ChainResponsability;
+
 public abstract class BaseManejador {
     private ManejadorReporte siguiente;
 

@@ -1,3 +1,4 @@
+package ChainResponsability;
 
 public class ControlCalidad extends BaseManejador{
 

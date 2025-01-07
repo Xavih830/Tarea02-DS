@@ -1,4 +1,8 @@
 
+package ChainResponsability;
+
 public interface ManejadorReporte {
-    public abstract void manejarReporte(Reporte reporte);
+    public void manejarReporte(Reporte reporte);
+    public void 
+
 }

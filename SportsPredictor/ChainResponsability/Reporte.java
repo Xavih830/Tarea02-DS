@@ -1,3 +1,5 @@
+package ChainResponsability;
+
 
 public class Reporte {
     private  String detalle;

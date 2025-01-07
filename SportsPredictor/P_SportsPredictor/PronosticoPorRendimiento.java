@@ -1,4 +1,4 @@
-package SportsPredictor;
+package P_SportsPredictor;
 
 public class PronosticoPorRendimiento implements PronosticoEstrategia {
     private  String rendimiento;

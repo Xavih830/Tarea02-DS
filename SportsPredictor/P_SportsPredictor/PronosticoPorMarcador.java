@@ -1,4 +1,4 @@
-package SportsPredictor;
+package P_SportsPredictor;
 
 public class PronosticoPorMarcador implements PronosticoEstrategia {
     

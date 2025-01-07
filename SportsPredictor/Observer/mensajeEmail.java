@@ -1,5 +1,6 @@
+package Observer;
 
-
+import P_SportsPredictor.*;
 
 public class mensajeEmail implements Notificadores{
 

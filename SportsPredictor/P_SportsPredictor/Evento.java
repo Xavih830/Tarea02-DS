@@ -1,4 +1,4 @@
-package SportsPredictor;
+package P_SportsPredictor;
 
 import java.util.Date;
 import java.util.List;

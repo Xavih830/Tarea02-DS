@@ -1,4 +1,4 @@
-package SportsPredictor;
+package P_SportsPredictor;
 
 import FactoryMethod.*;
 import chainresponsability.*;

@@ -1,5 +1,5 @@
 
-package SportsPredictor;
+package Observer;
 
 import java.util.List;
 

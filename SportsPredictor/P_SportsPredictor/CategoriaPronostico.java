@@ -1,5 +1,5 @@
 
-package SportsPredictor;
+package P_SportsPredictor;
 
 
 public class CategoriaPronostico{

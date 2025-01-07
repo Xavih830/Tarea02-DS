@@ -1,3 +1,4 @@
+
 public class EstadoPendiente implements EstadoPronostico {
 
     @Override

@@ -1,5 +1,4 @@
 
-
 public class Pronostico {
     private String prediccion;
     private CategoriaPronostico categoria;

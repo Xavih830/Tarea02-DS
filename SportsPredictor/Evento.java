@@ -1,6 +1,8 @@
+package SportsPredictor;
 
 import java.util.Date;
 import java.util.List;
+
 
 public class Evento {
     private String nombre;

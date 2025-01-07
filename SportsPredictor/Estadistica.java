@@ -1,3 +1,5 @@
+package SportsPredictor;
+
 public class Estadistica {
     private String descripcion;
     private double valor;

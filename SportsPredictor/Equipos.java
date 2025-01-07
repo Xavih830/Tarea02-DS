@@ -1,3 +1,4 @@
+package SportsPredictor;
 import java.util.List;
 
 public class Equipos {

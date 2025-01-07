@@ -1,3 +1,4 @@
+package SportsPredictor;
 
 public class EstadoAcertado implements EstadoPronostico{
 

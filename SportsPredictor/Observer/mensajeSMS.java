@@ -1,3 +1,6 @@
+
+package Observer;
+
 public class mensajeSMS implements Notificadores{
 
     @Override

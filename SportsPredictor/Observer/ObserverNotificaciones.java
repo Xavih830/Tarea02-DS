@@ -1,5 +1,5 @@
-
-
+package Observer;
+import Usuario;
 
 public class ObserverNotificaciones {
 

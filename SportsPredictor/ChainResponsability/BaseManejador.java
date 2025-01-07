@@ -1,9 +1,21 @@
-package ChainResponsability;
+package chainresponsability;
 
-public abstract class BaseManejador {
+public class BaseManejador implements ManejadorReporte{
     private ManejadorReporte siguiente;
 
-    public abstract void manejarReporte(Reporte reporte);
+
+
+    @Override
+    public void setNext(ManejadorReporte manejador) {
+        siguiente = manejador;
+    }
+    
+    @Override
+    public void manejarReporte(Reporte reporte) {
+        System.out.println("Reporte Manejado por "+ siguiente);
+    }
+    
+
 
 
 }

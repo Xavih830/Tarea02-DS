@@ -1,6 +1,7 @@
 
 package Observer;
 
+import P_SportsPredictor.*;
 import java.util.List;
 
 public class Administrador extends Persona {

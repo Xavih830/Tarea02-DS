@@ -1,6 +1,8 @@
+
 package Observer;
 
 
+import P_SportsPredictor.*;
 
 
 public class ObserverNotificaciones {

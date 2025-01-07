@@ -1,6 +1,7 @@
 package Observer;
 
 
+import P_SportsPredictor.*;
 
 public class mensajeSMS implements Notificadores{
 

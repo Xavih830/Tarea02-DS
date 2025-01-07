@@ -3,7 +3,7 @@ package ChainResponsability;
 public abstract class BaseManejador {
     private ManejadorReporte siguiente;
 
-    public void manejarReporte(Reporte reporte){}
+    public abstract void manejarReporte(Reporte reporte);
 
 
 }

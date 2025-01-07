@@ -1,4 +1,4 @@
-package chainresponsability;
+package ChainResponsability;
 
 
 public class Soporte extends BaseManejador {

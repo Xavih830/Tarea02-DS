@@ -1,21 +1,23 @@
 package P_SportsPredictor;
 
+
 public class Pronostico {
     private String prediccion;
     private CategoriaPronostico categoria;
     private Evento evento;
     private EstadoPronostico estado;
-    private PronosticoEstrategia estrategia;
+    private String estrategia;
 
 
     public Pronostico(String prediccion, CategoriaPronostico categoria, Evento evento, EstadoPronostico estado,
-            PronosticoEstrategia estrategia) {
+        String estrategia) {
         this.prediccion = prediccion;
         this.categoria = categoria;
         this.evento = evento;
         this.estado = estado;
         this.estrategia = estrategia;
     }
+
 
 
     public String getPrediccion() {

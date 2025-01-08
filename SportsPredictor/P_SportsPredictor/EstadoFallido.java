@@ -1,6 +1,6 @@
 package P_SportsPredictor;
 
-public class EstadoFallido implements EstadoPronostico{
+public class EstadoFallido extends EstadoPronostico{
 
     @Override
     public void gestionarEstado(Pronostico pronostico) {

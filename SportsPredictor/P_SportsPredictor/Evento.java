@@ -2,7 +2,7 @@ package P_SportsPredictor;
 
 import java.util.Date;
 import java.util.List;
-
+ 
 
 public class Evento {
     private String nombre;
@@ -10,6 +10,15 @@ public class Evento {
     private List<Pronostico> pronosticos;
     private List<Estadistica> estadisticas;
     private List<Equipos> equipos;
+
+
+public Evento(String nombre, Date fecha, List<Pronostico> pronosticos, List<Estadistica> estadisticas, List<Equipos> equipos) {
+        this.nombre = nombre;
+        this.fecha = fecha;
+        this.pronosticos = pronosticos;
+        this.estadisticas = estadisticas;
+        this.equipos = equipos;
+    }
 
 
     public void mostrarEstadisticas(){}

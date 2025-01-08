@@ -1,6 +1,17 @@
 package P_SportsPredictor;
 
-public interface EstadoPronostico {
-    public void gestionarEstado(Pronostico pronostico);
+public abstract class EstadoPronostico {
+    String estado;
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public abstract  EstadoPronostico gestionarEstado(Pronostico pronostico);
+
     
 }

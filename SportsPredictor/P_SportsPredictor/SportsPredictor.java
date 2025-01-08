@@ -33,7 +33,7 @@ public class SportsPredictor {
 
 
         FabricadeEventos evento1 = new crearEventoBaloncesto();
-        evento1.crearEvento("Baloncesto del siglo", LocalDateTime.of(2025, Month.FEBRUARY, 10, 19, 30));
+        evento1.crearEvento("Baloncesto del siglo", LocalDateTime.of(2025, Month.FEBRUARY, 10, 19, 30), null, null, null);
 
         ManejadorReporte soporte = new Soporte();
         ManejadorReporte C_calidad = new ControlCalidad();

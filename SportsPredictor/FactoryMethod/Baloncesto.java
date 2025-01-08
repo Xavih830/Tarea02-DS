@@ -1,23 +1,16 @@
 package FactoryMethod;
-import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.List;
-
 import P_SportsPredictor.*;
+import java.time.LocalDateTime;
+import java.util.List;
 
 public class Baloncesto implements Deportes{
 
 
 
     @Override
-    public void crearEvento(String nombre, LocalDateTime fecha) {
+    public void crearEvento(String nombre, LocalDateTime fecha, List<Pronostico> pronosticos, List<Estadistica> participantes, List<Equipos> equipos) {
 
-        List<Pronostico> pronosticos = {
-            new Pronostico(),
-            new Pronostico("Ganador", "Equipo B")};
-
-
-        Evento evento = new Evento(nombre, fecha, List<Pronostico> pronosticos, null, null);
+        Evento evento = new Evento(nombre, fecha, pronosticos, participantes, equipos);
 
         System.out.println("Evento de baloncesto creado");
     }

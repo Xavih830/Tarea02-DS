@@ -10,7 +10,7 @@ public class CategoriaPronostico{
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
-
+    
     public String getNombre() {
         return nombre;
     }
@@ -23,6 +23,8 @@ public class CategoriaPronostico{
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+
 
 
 }

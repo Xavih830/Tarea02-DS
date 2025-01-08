@@ -12,7 +12,16 @@ import java.util.ArrayList;
 public class SportsPredictor {
 
     
-    List<Evento> eventos = new ArrayList<Evento>();
+    protected List<Evento> eventos = new ArrayList<Evento>();
+    protected List<Pronostico> pronosticos = new ArrayList<Pronostico>();
+    protected List<Estadistica> estadisticas = new ArrayList<Estadistica>();
+    protected List<Equipos> equipos = new ArrayList<Equipos>();
+    protected List<Usuario> usuarios = new ArrayList<Usuario>();
+    protected List<CategoriaPronostico> categorias = new ArrayList<CategoriaPronostico>();
+    
+    public List<Evento> getEventos() {
+        return eventos;
+    }
 
     public static void main(String[] args) {
 

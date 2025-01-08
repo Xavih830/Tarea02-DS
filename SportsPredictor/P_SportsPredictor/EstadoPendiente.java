@@ -1,18 +1,14 @@
 package P_SportsPredictor;
 
-public class EstadoPendiente extends EstadoPronostico {
+public class EstadoPendiente implements EstadoPronostico {
 
     @Override
-    public EstadoPronostico gestionarEstado(Pronostico pronostico) {
-        return new EstadoPendiente();
+    public void gestionarEstado(Pronostico pronostico) {
+        System.out.println("El pronóstico está pendiente. Esperar confirmación.");
     }
 
-    public EstadoPendiente(){
-        this.estado = "Pendiente";
+    @Override
+    public String getEstado() {
+        return "Pendiente";
     }
-
-
-
-
-    
 }

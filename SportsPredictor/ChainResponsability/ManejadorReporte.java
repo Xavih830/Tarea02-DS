@@ -1,11 +1,7 @@
-
-package chainresponsability;
-
+package ChainResponsability;
 
 public interface ManejadorReporte {
-
-    public void manejarReporte(Reporte reporte);
-    public void setNext(ManejadorReporte manejador);
-
-
+    void manejarReporte(Reporte reporte);
+    void setNext(ManejadorReporte manejador);
 }
+

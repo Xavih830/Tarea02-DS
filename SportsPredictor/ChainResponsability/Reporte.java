@@ -1,11 +1,10 @@
-package chainresponsability;
-
+package ChainResponsability;
 
 public class Reporte {
-    private  String detalle;
-    private  String estado;
-    
-    public Reporte(String detalle, String estado){
+    private String detalle;
+    private String estado;
+
+    public Reporte(String detalle, String estado) {
         this.detalle = detalle;
         this.estado = estado;
     }
@@ -25,5 +24,5 @@ public class Reporte {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
 }
+

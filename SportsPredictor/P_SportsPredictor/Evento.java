@@ -1,8 +1,8 @@
 package P_SportsPredictor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
- 
 
 public class Evento {
     private String nombre;
@@ -10,66 +10,117 @@ public class Evento {
     private List<Pronostico> pronosticos;
     private List<Estadistica> estadisticas;
     private List<Equipos> equipos;
+    private String marcador;
+    private String resultado;
+    private EstadoPronostico estado;
 
+    public Evento(String nombre, LocalDateTime fecha) {
+        this.nombre = nombre;
+        this.fecha = fecha;
+        this.pronosticos = new ArrayList<>();
+        this.estadisticas = new ArrayList<>();
+        this.equipos = new ArrayList<>();
+        this.estado = new EstadoPendiente();
+        this.resultado = null;
+    }
 
-public Evento(String nombre, LocalDateTime fecha, List<Pronostico> pronosticos, List<Estadistica> estadisticas, List<Equipos> equipos) {
+    public Evento(String nombre, LocalDateTime fecha, List<Pronostico> pronosticos, 
+                  List<Estadistica> participantes, List<Equipos> equipos) {
         this.nombre = nombre;
         this.fecha = fecha;
         this.pronosticos = pronosticos;
-        this.estadisticas = estadisticas;
+        this.estadisticas = participantes;
         this.equipos = equipos;
     }
 
-
-    public void mostrarEstadisticas(){}
-    public void cerrarApuestas(){};
-
-    public int EncontrarEvento(String nombreEvento){
-        int i = 0;
-        SportsPredictor S = new SportsPredictor();
-        List<Evento> eventos = S.getEventos();  
-        String S_evento = nombreEvento;
-        for (Evento evento : eventos) {
-            if( evento.getNombre().equals(S_evento) ) {
-                i = eventos.indexOf(evento);
-            }else{
-                System.out.println("Evento no encontrado");
-            }
-        }
-        return i;
-        
+    public Evento(String nombre, LocalDateTime fecha, List<Pronostico> pronosticos, 
+                  List<Estadistica> participantes, List<Equipos> equipos, String marcador) {
+        this(nombre, fecha, pronosticos, participantes, equipos);
+        this.marcador = marcador;
     }
 
-    
+    public void agregarPronostico(Pronostico pronostico) {
+        this.pronosticos.add(pronostico);
+    }
+
+    public void agregarEstadistica(Estadistica estadistica) {
+        this.estadisticas.add(estadistica);
+    }
+
+    public void agregarEquipo(Equipos equipo) {
+        this.equipos.add(equipo);
+    }
+
+    public void mostrarEstadisticas() {
+        System.out.println("Estadísticas del evento:");
+        for (Estadistica estadistica : estadisticas) {
+            System.out.println("- " + estadistica.getDescripcion() + ": " + estadistica.getValor());
+        }
+    }
+
+    public void finalizarEvento(String resultado) {
+        if (estado instanceof EstadoAcertado) {
+            System.out.println("El evento ya ha sido finalizado.");
+            return;
+        }
+        this.estado = new EstadoAcertado(); 
+        this.resultado = resultado; 
+        System.out.println("El evento ha finalizado con resultado: " + resultado);
+    }
+
+    public String getResultado() {
+        if (estado instanceof EstadoAcertado) {
+            return resultado;
+        } else {
+            return "El evento aún no ha finalizado.";
+        }
+    }
+
+    public void cerrarApuestas() {
+        System.out.println("Cerrando apuestas para el evento: " + nombre);
+    }
+
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public LocalDateTime getFecha() {
         return fecha;
     }
+
     public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
     }
+
     public List<Pronostico> getPronosticos() {
         return pronosticos;
     }
-    public void setPronosticos(List<Pronostico> pronosticos) {
-        this.pronosticos = pronosticos;
-    }
+
     public List<Estadistica> getEstadisticas() {
         return estadisticas;
     }
-    public void setEstadisticas(List<Estadistica> estadisticas) {
-        this.estadisticas = estadisticas;
-    }
+
     public List<Equipos> getEquipos() {
         return equipos;
     }
-    public void setEquipos(List<Equipos> equipos) {
-        this.equipos = equipos;
+
+    public String getMarcador() {
+        return marcador;
     }
 
+    public void setMarcador(String marcador) {
+        this.marcador = marcador;
+    }
+
+    public void setResultado(String resultado){
+        this.resultado = resultado;
+    }
 }
+
+
+   
+

@@ -3,6 +3,7 @@ package P_SportsPredictor;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class Evento {
     private String nombre;
@@ -13,6 +14,9 @@ public class Evento {
     private String marcador;
     private String resultado;
     private EstadoPronostico estado;
+
+    // Logger para la clase
+    private static final Logger logger = Logger.getLogger(Evento.class.getName());
 
     // Constante para el estado acertado
     private static final EstadoPronostico ESTADO_ACERTADO = new EstadoAcertado();
@@ -55,20 +59,20 @@ public class Evento {
     }
 
     public void mostrarEstadisticas() {
-        System.out.println("Estadísticas del evento:");
+        logger.info("Estadísticas del evento:");
         for (Estadistica estadistica : estadisticas) {
-            System.out.println("- " + estadistica.getDescripcion() + ": " + estadistica.getValor());
+            logger.info("- " + estadistica.getDescripcion() + ": " + estadistica.getValor());
         }
     }
 
     public void finalizarEvento(String resultado) {
         if (estado instanceof EstadoAcertado) {
-            System.out.println("El evento ya ha sido finalizado.");
+            logger.info("El evento ya ha sido finalizado.");
             return;
         }
         this.estado = ESTADO_ACERTADO; // Usamos la constante en lugar de instanciar directamente
         this.resultado = resultado; 
-        System.out.println("El evento ha finalizado con resultado: " + resultado);
+        logger.info("El evento ha finalizado con resultado: " + resultado);
     }
 
     public String getResultado() {
@@ -80,7 +84,7 @@ public class Evento {
     }
 
     public void cerrarApuestas() {
-        System.out.println("Cerrando apuestas para el evento: " + nombre);
+        logger.info("Cerrando apuestas para el evento: " + nombre);
     }
 
     public String getNombre() {
@@ -123,6 +127,3 @@ public class Evento {
         this.resultado = resultado;
     }
 }
-
-   
-

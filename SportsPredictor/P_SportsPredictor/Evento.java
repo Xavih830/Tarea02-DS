@@ -14,6 +14,9 @@ public class Evento {
     private String resultado;
     private EstadoPronostico estado;
 
+    // Constante para el estado acertado
+    private static final EstadoPronostico ESTADO_ACERTADO = new EstadoAcertado();
+
     public Evento(String nombre, LocalDateTime fecha) {
         this.nombre = nombre;
         this.fecha = fecha;
@@ -63,7 +66,7 @@ public class Evento {
             System.out.println("El evento ya ha sido finalizado.");
             return;
         }
-        this.estado = new EstadoAcertado(); 
+        this.estado = ESTADO_ACERTADO; // Usamos la constante en lugar de instanciar directamente
         this.resultado = resultado; 
         System.out.println("El evento ha finalizado con resultado: " + resultado);
     }
@@ -120,7 +123,6 @@ public class Evento {
         this.resultado = resultado;
     }
 }
-
 
    
 

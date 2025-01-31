@@ -1,13 +1,12 @@
 package Observer;
 
-import P_SportsPredictor.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
 public class ObserverNotificaciones {
 
-    private List<Usuario> suscriptores;
+    private List<Observer> suscriptores; // Lista de observadores genéricos
     private List<Notificadores> notificadores;
     private static final Logger logger = Logger.getLogger(ObserverNotificaciones.class.getName());
 
@@ -16,19 +15,19 @@ public class ObserverNotificaciones {
         this.notificadores = new ArrayList<>();
     }
 
-    // Método para suscribir un usuario
-    public void subscribir(Usuario usuario) {
-        if (!suscriptores.contains(usuario)) {
-            suscriptores.add(usuario);
-            logger.info("Usuario " + usuario.getNombre() + " suscrito correctamente.");
+    // Método para suscribir un observador
+    public void subscribir(Observer observador) {
+        if (!suscriptores.contains(observador)) {
+            suscriptores.add(observador);
+            logger.info("Observador suscrito correctamente.");
         }
     }
 
-    // Método para desuscribir un usuario
-    public void desubscribir(Usuario usuario) {
-        if (suscriptores.contains(usuario)) {
-            suscriptores.remove(usuario);
-            logger.info("Usuario " + usuario.getNombre() + " desuscrito correctamente.");
+    // Método para desuscribir un observador
+    public void desubscribir(Observer observador) {
+        if (suscriptores.contains(observador)) {
+            suscriptores.remove(observador);
+            logger.info("Observador desuscrito correctamente.");
         }
     }
 
@@ -40,26 +39,18 @@ public class ObserverNotificaciones {
         }
     }
 
-    // Método para eliminar un notificador
-    public void eliminarNotificador(Notificadores notificador) {
-        if (notificadores.contains(notificador)) {
-            notificadores.remove(notificador);
-            logger.info("Notificador eliminado correctamente.");
-        }
-    }
-
-    // Método para notificar a los suscriptores
+    // Método para notificar a los observadores
     public void notificar(String mensaje) {
-        for (Usuario usuario : suscriptores) {
+        for (Observer observador : suscriptores) {
             for (Notificadores notificador : notificadores) {
-                String notificacion = notificador.enviarNotificacion(usuario, mensaje);
+                String notificacion = notificador.enviarNotificacion(observador, mensaje);
                 logger.info(notificacion);
             }
         }
     }
 
     // Método para obtener una copia de la lista de suscriptores (solo lectura)
-    public List<Usuario> getSuscriptores() {
+    public List<Observer> getSuscriptores() {
         return new ArrayList<>(suscriptores); // Devuelve una copia para evitar modificaciones externas
     }
 

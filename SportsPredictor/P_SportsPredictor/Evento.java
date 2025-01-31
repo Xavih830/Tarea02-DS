@@ -1,5 +1,3 @@
-package P_SportsPredictor;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -125,5 +123,20 @@ public class Evento {
 
     public void setResultado(String resultado){
         this.resultado = resultado;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Evento{")
+          .append("nombre='").append(nombre).append('\'')
+          .append(", fecha=").append(fecha)
+          .append(", resultado='").append(resultado).append('\'')
+          .append(", estado=").append(estado.getClass().getSimpleName())
+          .append(", pronosticos=").append(pronosticos.size())
+          .append(", estadisticas=").append(estadisticas.size())
+          .append(", equipos=").append(equipos.size())
+          .append('}');
+        return sb.toString();
     }
 }
